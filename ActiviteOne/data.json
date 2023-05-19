@@ -1,0 +1,158 @@
+{
+  "refPapa": [
+    {
+      "nombre": "chips",
+      "cantVend": 1,
+      "valorUnd": 1100,
+      "ventas": {
+        "lunes": {
+          "cantidad": 20
+        },
+        "martes": {
+          "cantidad": 50
+        },
+        "miercoles": {
+          "cantidad": 90
+        },
+        "jueves": {
+          "cantidad": 30
+        },
+        "viernes": {
+          "cantidad": 40
+        }
+      }
+    },
+    {
+      "nombre": "bbq",
+      "cantVend": 2,
+      "valorUnd": 1500,
+      "ventas": {
+        "lunes": {
+          "cantidad": 26
+        },
+        "martes": {
+          "cantidad": 56
+        },
+        "miercoles": {
+          "cantidad": 96
+        },
+        "jueves": {
+          "cantidad": 36
+        },
+        "viernes": {
+          "cantidad": 46
+        }
+      }
+    },
+    {
+      "nombre": "tomate",
+      "cantVend": 3,
+      "valorUnd": 2000,
+      "ventas": {
+        "lunes": {
+          "cantidad": 27
+        },
+        "martes": {
+          "cantidad": 58
+        },
+        "miercoles": {
+          "cantidad": 98
+        },
+        "jueves": {
+          "cantidad": 38
+        },
+        "viernes": {
+          "cantidad": 48
+        }
+      }
+    },
+    {
+      "nombre": "natural",
+      "cantVend": 4,
+      "valorUnd": 1000,
+      "ventas": {
+        "lunes": {
+          "cantidad": 29
+        },
+        "martes": {
+          "cantidad": 59
+        },
+        "miercoles": {
+          "cantidad": 99
+        },
+        "jueves": {
+          "cantidad": 39
+        },
+        "viernes": {
+          "cantidad": 49
+        }
+      }
+    },
+    {
+      "nombre": "pollo",
+      "cantVend": 5,
+      "valorUnd": 1400,
+      "ventas": {
+        "lunes": {
+          "cantidad": 21
+        },
+        "martes": {
+          "cantidad": 52
+        },
+        "miercoles": {
+          "cantidad": 91
+        },
+        "jueves": {
+          "cantidad": 31
+        },
+        "viernes": {
+          "cantidad": 41
+        }
+      }
+    },
+    {
+      "nombre": "picante",
+      "cantVend": 6,
+      "valorUnd": 1500,
+      "ventas": {
+        "lunes": {
+          "cantidad": 22
+        },
+        "martes": {
+          "cantidad": 52
+        },
+        "miercoles": {
+          "cantidad": 92
+        },
+        "jueves": {
+          "cantidad": 32
+        },
+        "viernes": {
+          "cantidad": 42
+        }
+      }
+    },
+    {
+      "nombre": "limon",
+      "cantVend": 7,
+      "valorUnd": 1700,
+      "ventas": {
+        "lunes": {
+          "cantidad": 23
+        },
+        "martes": {
+          "cantidad": 53
+        },
+        "miercoles": {
+          "cantidad": 93
+        },
+        "jueves": {
+          "cantidad": 33
+        },
+        "viernes": {
+          "cantidad": 43
+        }
+      }
+    }
+  ]
+}

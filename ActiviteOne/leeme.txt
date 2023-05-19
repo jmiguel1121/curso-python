@@ -1,0 +1,24 @@
+Apreciado Estudiante:
+Favor realizar:
+Basado en el código entregado de vectores, que está en el archivo de inducción,
+favor ajustar para que se determine:
+1. El valor de ventas por referencia y día 
+Tener en cuenta que las ventas son de una semana de lunes a
+viernes. 
+Adicional:
+2. Determinar la venta mayor y la venta menor indicando
+la referencia 
+
+Modalidad:
+Grupal(5) o individual
+
+Valoración:
+15puntos
+Si se trabaja con "nunpy" se valora sobre 20 puntos
+
+Fecha de entrega:
+20 de mayo de 2023 -8:00máximo, es decir, antes de las 8 am
+
+Producto a entregar:
+Código en Python - Tener en cuenta que sí se trabaja en grupo o no, debe ir una 
+portada o al menos comentariado el código
