@@ -1,4 +1,13 @@
-# import library numpy
+#           DIPLOMADO MACHINE LEARNING
+#
+#               jose miguel lagos
+# 
+#                actividad N°1
+#
+#  Corporación Unificada Nacional de Educación Superior  
+#
+#              20 de Mayo de 2023
+#
 import numpy as np
 import json
 
@@ -6,93 +15,128 @@ file = open('data.json')
 data = json.load(file)
 file.close()
 
-# declarar vector
-dias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes']
-can, ref, total, dias = [], [], [], []
-lunes, martes, miercoles, jueves, viernes = [], [], [], [], []
 T = 7
+# **** declarar vector *****
+dias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes']
+# lista para los dias de la semana
+canSemana = []
+# ref -> valor x und
+ref = np.zeros((T,), dtype=int)
+# arreglos por semana
+lunes = np.zeros((T,), dtype=int)
+martes = np.zeros((T,), dtype=int)
+miercoles = np.zeros((T,), dtype=int)
+jueves = np.zeros((T,), dtype=int)
+viernes = np.zeros((T,), dtype=int)
 
 
-def test():
-    # arr= np.array([can],[ref],[total])
-    print('arr')
-    print(data['refPapa'])
 
-
-def inicializar():
-    for i in range(T):
-        lunes.append(0)
-        martes.append(0)
-        miercoles.append(0)
-        jueves.append(0)
-        viernes.append(0)
-        ref.append(0)
-        print(can)
-
-
-def inicializarTotal():
-    for i in range(T):
-        total.append(0)
-
-
+# ingreo manual de valores x referencia
 def referencias():
     for i in range(T):
+        print(data['refPapa'][i]['nombre'])
         ref[i] = int(
-            input("Digite valor de ventas de la referencia de papa frita ", data['refPapa'][i]))
+            input("Digite valor de ventas de la referencia de papa frita " + data['refPapa'][i]['nombre']))
     return ref
 
-
+# ingreo manual de valores por dias
 def cantidadXDias():
     inxDia = 0
     for i in range(T):
         lunes[i] = int(
-            input("Cantidad de ventas de la referencia de papa frita",
-                  data['refPapa'][i], "para el dia ", dias[inxDia]))
+            input("Cantidad de ventas de la referencia de papa frita " +
+                  data['refPapa'][i]['nombre'] + " para el dia " + dias[inxDia]+" : "))
         inxDia += 1
         martes[i] = int(
-            input("Cantidad de ventas de la referencia de papa frita",
-                  data['refPapa'][i], "para el dia ", dias[inxDia]))
+            input("Cantidad de ventas de la referencia de papa frita " +
+                  data['refPapa'][i]['nombre'] + " para el dia " + dias[inxDia]+" : "))
         inxDia += 1
         miercoles[i] = int(
-            input("Cantidad de ventas de la referencia de papa frita",
-                  data['refPapa'][i], "para el dia ", dias[inxDia]))
+            input("Cantidad de ventas de la referencia de papa frita " +
+                  data['refPapa'][i]['nombre'] + " para el dia " + dias[inxDia]+" : "))
         inxDia += 1
         jueves[i] = int(
-            input("Cantidad de ventas de la referencia de papa frita",
-                  data['refPapa'][i], "para el dia ", dias[inxDia]))
+            input("Cantidad de ventas de la referencia de papa frita " +
+                  data['refPapa'][i]['nombre'] + " para el dia " + dias[inxDia]+" : "))
         inxDia += 1
         viernes[i] = int(
-            input("Cantidad de ventas de la referencia de papa frita",
-                  data['refPapa'][i], "para el dia ", dias[inxDia]))
+            input("Cantidad de ventas de la referencia de papa frita " +
+                  data['refPapa'][i]['nombre'] + " para el dia " + dias[inxDia]+" : "))
         inxDia = 0
 
-    return ref
+    return [lunes, martes, miercoles, jueves, viernes]
 
-
-def costos(can, ref):
+#cargar datos desde json 
+def cantidadXDiasDatosJson():
     for i in range(T):
-        total[i] = can[i]*ref[i]
+        lunes[i] = data['refPapa'][i]['ventas'][dias[0]]['cantidad']
+        martes[i] = data['refPapa'][i]['ventas'][dias[1]]['cantidad']
+        miercoles[i] = data['refPapa'][i]['ventas'][dias[2]]['cantidad']
+        jueves[i] = data['refPapa'][i]['ventas'][dias[3]]['cantidad']
+        viernes[i] = data['refPapa'][i]['ventas'][dias[4]]['cantidad']
 
-    print('total')
+    res = [lunes, martes, miercoles, jueves, viernes]
+    print('Datos cargados desde json cantidad X Dias')
+    print(res)
+
+    return res
+
+# calcula los totales
+def costos(sumaSemana, precioXRef):
+    total = np.zeros((T,), dtype=int)
+    for i in range(T):
+        total[i] = np.array(precioXRef[i]*sumaSemana[i])
+
+    print('total ref x suma Semana')
     print(total)
+
     return total
 
+# suma los valores po semana
+def sumarSemana(semana):
+    sumaSemana = np.zeros((T,), dtype=int)
+    for i in range(len(semana)):
+        sumaSemana = np.array(sumaSemana+semana[i])
 
-def mostrar(can, ref, total):
-    tgc = 0
-    tgv = 0
-    # print(can)
-    # print(ref)
-    # print(total)
+    print('sumaSemana')
+    print(sumaSemana)
 
-    for i in range(T):
-        tgc = tgc+can[i]
+    return sumaSemana
 
-    for i in range(T):
-        tgv = tgv+total[i]
+# 1. El valor de ventas por referencia y día 
+# Tener en cuenta que las ventas son de una semana de lunes a
+# viernes. 
+def mostrarXRefXDia(sumaSemana, precioXRef):
+    salidaDias = ' | referencia  | val x und | '
+    arrPrint = []
+    for i in range(len(dias)):
+        salidaDias += dias[i]+' | '
 
-    print("Las ventas totales en unidades de papas fritas es de", tgc)
-    print("Las ventas totales en dinero de papas fritas es de", tgv)
+    for j in range(T):
+        salidaVal = ' |  '
+        for i in range(len(dias)):
+            salidaVal += str((sumaSemana[i][j]*precioXRef[j])) + '  | '
+        arrPrint.append(salidaVal)
+
+    print(salidaDias)
+    for i in range(len(arrPrint)):
+        print(' |    ' + data['refPapa'][i]['nombre'] +
+              '    |   ' + str(precioXRef[i]) + '  ', arrPrint[i])
+
+# 2. Determinar la venta mayor y la venta menor indicando
+# la referencia 
+def mostrarMaxMin(sumaSemana, total):
+
+    minVenta = np.amin(total)
+    minVentaIdx = np.argmin(total)
+
+    maxVenta = np.amax(total)
+    maxVentaIdx = np.argmax(total)
+
+    print("La venta mayor de papas fritas es de " + data['refPapa'][maxVentaIdx]['nombre'] +
+          ", es el valor de " + str(maxVenta) + " con " + str(sumaSemana[maxVentaIdx])+" Unds")
+    print("La venta menor de papas fritas es de " + data['refPapa'][minVentaIdx]['nombre'] +
+          ", es el valor de " + str(minVenta) + " con " + str(sumaSemana[minVentaIdx]) + " Unds")
 
 
 def titulo():
@@ -102,27 +146,16 @@ def titulo():
 def salir():
     print("CHAO")
 
-
+#cargar datos desde json 
 def cargarDatosJsonRef():
-    for papa in data['refPapa']:
-        # print(papa['codigo'])
-        ref.append(int(papa['valorUnd']))
+    for i in range(T):
+        ref[i] = int(data['refPapa'][i]['valorUnd'])
 
     print('Datos cargados desde json [ref]')
     print(ref)
     return ref
 
-
-def cargarDatosJsonCan():
-    for papa in data['refPapa']:
-       # print(papa['valorUnd'])
-        can.append(int(papa['cantVend']))
-
-    print('Datos cargados desde json [can]')
-    print(can)
-    return can
-
-
+# valida si se cargan los datos o se ingresan manual
 def validarCargaDatos():
     continuar = False
     res = ''
@@ -138,18 +171,23 @@ def main():
     titulo()
     cargarDatos = validarCargaDatos()
     if (cargarDatos):
-        can = cargarDatosJsonCan()
+        canSemana = cantidadXDiasDatosJson()
         ref = cargarDatosJsonRef()
-        inicializarTotal()
     else:
-        inicializar()
-        inicializarTotal()
-        can = captura()
         ref = referencias()
+        canSemana = cantidadXDias()
+        print('Valores ingresados manualmente [ref]', ref)
+        print('Valores ingresados manualmente cantidad X Dias', canSemana)
 
-    # test()
-    total = costos(can, ref)
-    mostrar(can, ref, total)
+    totalSemana = sumarSemana(canSemana)
+    totalGeneral = costos(totalSemana, ref)
+    print('')
+    print('************************************************************************')
+    print('************************* Totales **************************************')
+    print('************************************************************************')
+    mostrarMaxMin(totalSemana, totalGeneral)
+    print('************************************************************************')
+    mostrarXRefXDia(canSemana, ref)
     salir()
 
 

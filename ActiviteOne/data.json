@@ -2,7 +2,6 @@
   "refPapa": [
     {
       "nombre": "chips",
-      "cantVend": 1,
       "valorUnd": 1100,
       "ventas": {
         "lunes": {
@@ -22,9 +21,9 @@
         }
       }
     },
+
     {
       "nombre": "bbq",
-      "cantVend": 2,
       "valorUnd": 1500,
       "ventas": {
         "lunes": {
@@ -46,7 +45,6 @@
     },
     {
       "nombre": "tomate",
-      "cantVend": 3,
       "valorUnd": 2000,
       "ventas": {
         "lunes": {
@@ -68,7 +66,6 @@
     },
     {
       "nombre": "natural",
-      "cantVend": 4,
       "valorUnd": 1000,
       "ventas": {
         "lunes": {
@@ -90,7 +87,6 @@
     },
     {
       "nombre": "pollo",
-      "cantVend": 5,
       "valorUnd": 1400,
       "ventas": {
         "lunes": {
@@ -112,7 +108,6 @@
     },
     {
       "nombre": "picante",
-      "cantVend": 6,
       "valorUnd": 1500,
       "ventas": {
         "lunes": {
@@ -134,7 +129,6 @@
     },
     {
       "nombre": "limon",
-      "cantVend": 7,
       "valorUnd": 1700,
       "ventas": {
         "lunes": {
