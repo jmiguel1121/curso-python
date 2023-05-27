@@ -1,0 +1,49 @@
+{
+  "divisas": [
+    {
+      "moneda": "USD",
+      "nombre": "Dolares USA",
+      "valor": {
+        "TMR": "4500",
+        "compra": "4100",
+        "venta": "4400"
+      }
+    },
+    {
+      "moneda": "MXN",
+      "nombre": "Peso mexicano",
+      "valor": {
+        "TMR": "250",
+        "compra": "200",
+        "venta": "230"
+      }
+    },
+    {
+      "moneda": "EUR",
+      "nombre": "Euro",
+      "valor": {
+        "TMR": "4800",
+        "compra": "4000",
+        "venta": "4700"
+      }
+    },
+    {
+      "moneda": "CAD",
+      "nombre": "Dolar canadiense",
+      "valor": {
+        "TMR": "4800",
+        "compra": "4100",
+        "venta": "4700"
+      }
+    },
+    {
+      "moneda": "GBP",
+      "nombre": "Libra esterlina",
+      "valor": {
+        "TMR": "4900",
+        "compra": "4300",
+        "venta": "4800"
+      }
+    }
+  ]
+}
