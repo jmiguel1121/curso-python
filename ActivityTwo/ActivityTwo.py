@@ -1,10 +1,10 @@
 #           DIPLOMADO MACHINE LEARNING
 #
 #               jose miguel lagos
-# 
+#
 #                actividad N°2
 #
-#  Corporación Unificada Nacional de Educación Superior  
+#  Corporación Unificada Nacional de Educación Superior
 #
 #              27 de Mayo de 2023
 #
@@ -37,9 +37,16 @@ def cacularDivisa(cantidad, idxDivisa, accion):
     return round(res, 2)
 
 
-def calcularGanaciaPerdida(valTMR, valCompra, valVenta):
-    res = {"Ganancia comprador => ": round(valCompra-valTMR, 2),
-           "Ganancia vendedor => ": round(valVenta-valTMR, 2)}
+def calcularGanaciaPerdida(valTMR, valCompra, valVenta, idxDivisa):
+    ganComp = round(valCompra-valTMR, 2)
+    gavVend = round(valVenta-valTMR, 2)
+    baseTMR = int(data['divisas'][idxDivisa]['valor'][accion[0]])
+    print('baseTMR')
+    print(baseTMR)
+    res = {"Ganancia comprador": ganComp,
+           "Valor ganancia comprador": ganComp*baseTMR,
+           "Ganancia vendedor": gavVend,
+           "Valor ganancia vendedor": gavVend*baseTMR}
 
     return res
 
@@ -55,13 +62,14 @@ def procesoConvertidorDivisa(ixd):
     valTMR = cacularDivisa(valor, ixd, accion[0])
     valCompra = cacularDivisa(valor, ixd, accion[1])
     valVenta = cacularDivisa(valor, ixd, accion[2])
-    informe = calcularGanaciaPerdida(valTMR, valCompra, valVenta)
+    informe = calcularGanaciaPerdida(valTMR, valCompra, valVenta, ixd)
     valConverciones = (valTMR, valCompra, valVenta)
     print('***************** Informe ******************************')
     for i in range(len(accion)):
         print(' * ' + str(accion[i]) + ' -> '+str(valConverciones[i]))
     print('--------------------------------------------------------')
-    print(informe)
+    for key, value in informe.items():
+        print(key, ' : ', value)
     print('********************************************************')
 
 
@@ -85,7 +93,8 @@ def main():
         if validarSEleccionRango(ixd):
             procesoConvertidorDivisa(ixd)
         salir = validaContinuar()
-    
-    print('============ !Adios ======================================')    
+
+    print('============ !Adios ======================================')
+
 
 main()
