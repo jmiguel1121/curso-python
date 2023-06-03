@@ -1,0 +1,22 @@
+01:43:39-Jun-03-2023,ETL Job Started
+01:43:39-Jun-03-2023,Extract phase Started
+01:43:39-Jun-03-2023,Extract phase Ended
+01:43:39-Jun-03-2023,Transform phase Started
+01:43:39-Jun-03-2023,Transform phase Ended
+01:43:39-Jun-03-2023,Load phase Started
+01:43:39-Jun-03-2023,create directory out_files
+01:43:39-Jun-03-2023,Order data by cloum car_model
+01:43:39-Jun-03-2023,load data to csv file
+01:43:39-Jun-03-2023,Load phase Ended in out_files/014339Jun032023_dealership_transformed_data.csv
+01:43:39-Jun-03-2023,ETL Job Ended
+01:44:24-Jun-03-2023,ETL Job Started
+01:44:24-Jun-03-2023,Extract phase Started
+01:44:24-Jun-03-2023,Extract phase Ended
+01:44:24-Jun-03-2023,Transform phase Started
+01:44:24-Jun-03-2023,Transform phase Ended
+01:44:24-Jun-03-2023,Load phase Started
+01:44:24-Jun-03-2023,create directory out_files
+01:44:24-Jun-03-2023,Order data by cloum car_model
+01:44:24-Jun-03-2023,load data to csv file
+01:44:24-Jun-03-2023,Load phase Ended in out_files/014424Jun032023_dealership_transformed_data.csv
+01:44:24-Jun-03-2023,ETL Job Ended

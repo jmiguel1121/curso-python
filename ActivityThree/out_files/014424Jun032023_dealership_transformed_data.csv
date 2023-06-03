@@ -1,0 +1,61 @@
+;car_model;year_of_manufacture;price;fuel
+0;800;2003;522.39;Petrol
+1;alto 800;2017;4253.73;Petrol
+2;alto k10;2016;4253.73;Petrol
+3;alto k10;2014;3805.97;Petrol
+4;alto k10;2016;4477.61;Petrol
+5;alto k10;2010;2910.45;Petrol
+6;alto k10;2014;3731.34;Petrol
+7;baleno;2016;8731.34;Petrol
+8;ciaz;2015;11119.4;Diesel
+9;ciaz;2017;11567.16;Petrol
+10;ciaz;2015;11194.03;Petrol
+11;ciaz;2015;10223.88;Diesel
+12;ciaz;2016;13059.7;Diesel
+13;ciaz;2015;10074.63;Petrol
+14;ciaz;2017;10820.9;Petrol
+15;ciaz;2015;11119.4;Diesel
+16;ciaz;2014;11194.03;Petrol
+17;corolla altis;2009;5373.13;Petrol
+18;corolla altis;2010;7089.55;Petrol
+19;dzire;2009;3358.21;Petrol
+20;dzire;2014;8208.96;Diesel
+21;dzire;2015;6940.3;Petrol
+22;dzire;2014;8208.96;Diesel
+23;ertiga;2015;10820.9;Diesel
+24;ertiga;2016;11567.16;Diesel
+25;ertiga;2016;11567.16;Diesel
+26;ertiga;2015;9104.48;Petrol
+27;ertiga;2015;8656.72;Petrol
+28;ertiga;2014;8955.22;Diesel
+29;etios cross;2015;6716.42;Petrol
+30;etios g;2014;6119.4;Petrol
+31;fortuner;2012;22238.81;Diesel
+32;fortuner;2015;34328.36;Diesel
+33;fortuner;2013;23880.6;Diesel
+34;fortuner;2014;29835.82;Diesel
+35;ignis;2017;7313.43;Petrol
+36;innova;2005;4104.48;Petrol
+37;innova;2017;26865.67;Diesel
+38;omni;2012;1865.67;Petrol
+39;ritz;2014;5000.0;Petrol
+40;ritz;2011;3507.46;Petrol
+41;ritz;2012;4626.87;Diesel
+42;ritz;2013;3955.22;Petrol
+43;s cross;2015;9701.49;Diesel
+44;swift;2017;8955.22;Petrol
+45;swift;2013;6194.03;Petrol
+46;swift;2011;4477.61;Petrol
+47;swift;2014;6865.67;Diesel
+48;swift;2014;7388.06;Diesel
+49;sx4;2013;7089.55;Diesel
+50;sx4;2011;4402.99;CNG
+51;sx4;2010;3955.22;Petrol
+52;sx4;2011;6567.16;Petrol
+53;sx4;2008;2910.45;Petrol
+54;sx4;2003;3358.21;Petrol
+55;vitara brezza;2018;13805.97;Diesel
+56;wagon r;2013;4328.36;Petrol
+57;wagon r;2011;4253.73;Petrol
+58;wagon r;2015;4850.75;CNG
+59;wagon r;2006;1567.16;Petrol
